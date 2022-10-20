@@ -6,7 +6,7 @@ public class Ram {
     //-memoryCapacity: Integer
     //-brand: String
     private Integer id;
-    private String  memoryType;
+    private String memoryType;
     private Integer memorycapacity;
     private String brand;
 
