@@ -4,11 +4,13 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("Iniciando...");
-// PARTE DEL PROCESADOR
+        // PARTE DEL PROCESADOR
         Processor i5 = new Processor();
         i5.setId(1);
         i5.setCores(4);
         i5.setSocket("LGA1200");
+        i5.setBrand("Intel");
+
 
         System.out.println("Tipo de socket del procesador es: " + i5.getSocket());
         System.out.println("El numero de nucleos del procesador:" + i5.getCores());
@@ -22,7 +24,7 @@ public class Main {
         System.out.println("Numero de nucleos del procesador" + amd.getCores());
         System.out.println("----------------");
 
-// PARTE DE LA PLACA BASE
+        // PARTE DE LA PLACA BASE
         MotherBoard asus = new MotherBoard();
         asus.setId(1);
         asus.setBrand("Asus");
@@ -33,7 +35,14 @@ public class Main {
         System.out.println("La marca de la placa base es: " + asus.getBrand());
         System.out.println("El socket de la placa base es: " + asus.getSocket());
         System.out.println("Los slots de la placa base son: " + asus.getSlotsNumber());
+        System.out.println("----------------");
 
-
+        // TESTZONE DE SetUpPc
+        SetUpPc setUp = new SetUpPc();
+        setUp.setId("pipo1");
+        setUp.setProcessor(i5);
+        setUp.setMotherBoard(asus);
+        System.out.println(setUp.getProcessor().getBrand());
+        System.out.println(setUp.getMotherBoard().getBrand());
     }
 }
