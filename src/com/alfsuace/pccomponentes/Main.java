@@ -37,6 +37,13 @@ public class Main {
         System.out.println("Los slots de la placa base son: " + asus.getSlotsNumber());
         System.out.println("----------------");
 
+
+        //PARTE DE LA RAM
+        Ram kingston = new Ram();
+        kingston.setMemoryType("DIMM");
+        kingston.setMemorycapacity(8);
+        System.out.println("----------------");
+
         // TESTZONE DE SetUpPc
         SetUpPc setUp = new SetUpPc();
         setUp.setId("pipo1");
@@ -44,5 +51,10 @@ public class Main {
         setUp.setMotherBoard(asus);
         System.out.println(setUp.getProcessor().getBrand());
         System.out.println(setUp.getMotherBoard().getBrand());
+        setUp.addRam(kingston);
+        setUp.addRam(kingston);
+        setUp.addRam(kingston);
+        setUp.addRam(kingston);
+
     }
 }

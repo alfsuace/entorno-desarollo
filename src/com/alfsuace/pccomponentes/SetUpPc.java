@@ -1,10 +1,15 @@
 package com.alfsuace.pccomponentes;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SetUpPc {
     private String id;
     private Processor processor;
 
     private MotherBoard motherBoard;
+
+    private List<Ram> rams = new ArrayList<>();
 
     public void setId (String id) {
         this.id = id;
@@ -28,5 +33,11 @@ public class SetUpPc {
 
     public MotherBoard getMotherBoard () {
         return motherBoard;
+    }
+    public void addRam(Ram ram){
+        this.rams.add(ram);
+    }
+    public List<Ram> getRams(){
+        return rams;
     }
 }
